@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERPUNK SQL INJECTOR v2.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="matrix-rain"></div>
+    <div class="scan-line"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="glitch" data-text="CYBERPUNK">CYBERPUNK</span>
+                <span class="subtitle">SQL INJECTOR v2.0</span>
+            </h1>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">SYSTEM ONLINE</span>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <!-- Main Injection Panel -->
+            <div class="panel">
+                <h2 class="panel-title">🎯 TARGET ACQUISITION</h2>
+                <div class="input-group">
+                    <label for="targetUrl">Target URL:</label>
+                    <input type="url" id="targetUrl" class="cyber-input" placeholder="https://target-site.com/vulnerable-page.php?id=1" required>
+                </div>
+                <div class="input-group">
+                    <label for="injectionPoint">Injection Parameter:</label>
+                    <input type="text" id="injectionPoint" class="cyber-input" placeholder="id, user, search, etc." value="id">
+                </div>
+                <button id="scanBtn" class="cyber-button">
+                    <span class="button-text">SCAN VULNERABILITIES</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+
+            <!-- Injection Methods Panel -->
+            <div class="panel">
+                <h2 class="panel-title">⚡ INJECTION METHODS</h2>
+                <div class="method-grid">
+                    <div class="method-item">
+                        <input type="checkbox" id="boolean" class="cyber-checkbox" checked>
+                        <label for="boolean" class="checkmark">Boolean-Based</label>
+                    </div>
+                    <div class="method-item">
+                        <input type="checkbox" id="union" class="cyber-checkbox" checked>
+                        <label for="union" class="checkmark">Union-Based</label>
+                    </div>
+                    <div class="method-item">
+                        <input type="checkbox" id="time" class="cyber-checkbox" checked>
+                        <label for="time" class="checkmark">Time-Based</label>
+                    </div>
+                    <div class="method-item">
+                        <input type="checkbox" id="error" class="cyber-checkbox" checked>
+                        <label for="error" class="checkmark">Error-Based</label>
+                    </div>
+                    <div class="method-item">
+                        <input type="checkbox" id="stacked" class="cyber-checkbox">
+                        <label for="stacked" class="checkmark">Stacked Queries</label>
+                    </div>
+                    <div class="method-item">
+                        <input type="checkbox" id="blind" class="cyber-checkbox">
+                        <label for="blind" class="checkmark">Blind SQL</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Options Panel -->
+            <div class="panel">
+                <h2 class="panel-title">🔧 ADVANCED CONFIGURATION</h2>
+                <div class="option-grid">
+                    <div class="option-item">
+                        <label for="timeout">Timeout (ms):</label>
+                        <input type="number" id="timeout" class="cyber-input" value="5000" min="1000" max="30000">
+                    </div>
+                    <div class="option-item">
+                        <label for="threads">Threads:</label>
+                        <input type="number" id="threads" class="cyber-input" value="5" min="1" max="20">
+                    </div>
+                    <div class="option-item">
+                        <label for="delay">Delay (ms):</label>
+                        <input type="number" id="delay" class="cyber-input" value="100" min="0" max="1000">
+                    </div>
+                    <div class="option-item">
+                        <label for="retries">Retries:</label>
+                        <input type="number" id="retries" class="cyber-input" value="3" min="1" max="10">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="bypassWaf" class="cyber-checkbox">
+                        <label for="bypassWaf" class="checkmark">Bypass WAF</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="encodePayload" class="cyber-checkbox" checked>
+                        <label for="encodePayload" class="checkmark">Encode Payloads</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="randomize" class="cyber-checkbox">
+                        <label for="randomize" class="checkmark">Randomize Headers</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="stealth" class="cyber-checkbox">
+                        <label for="stealth" class="checkmark">Stealth Mode</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reconnaissance Panel -->
+            <div class="panel">
+                <h2 class="panel-title">🔍 DATABASE RECONNAISSANCE</h2>
+                <button id="toggleRecon" class="cyber-button secondary">
+                    <span class="button-text">TOGGLE RECONNAISSANCE</span>
+                </button>
+                <div id="reconContent" class="reconnaissance-panel" style="display: none;">
+                    <div class="input-group">
+                        <label for="reconUrl">Target URL:</label>
+                        <input type="url" id="reconUrl" class="cyber-input" placeholder="https://target-site.com">
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractDb" class="cyber-checkbox" checked>
+                            <label for="extractDb" class="checkmark">Database Info</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractTables" class="cyber-checkbox" checked>
+                            <label for="extractTables" class="checkmark">Table Names</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractColumns" class="cyber-checkbox" checked>
+                            <label for="extractColumns" class="checkmark">Column Names</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractData" class="cyber-checkbox">
+                            <label for="extractData" class="checkmark">Sample Data</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractUsers" class="cyber-checkbox">
+                            <label for="extractUsers" class="checkmark">User Accounts</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="extractConfig" class="cyber-checkbox">
+                            <label for="extractConfig" class="checkmark">Config Files</label>
+                        </div>
+                    </div>
+                    <button id="reconBtn" class="cyber-button">
+                        <span class="button-text">START RECONNAISSANCE</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Status Window -->
+            <div class="live-status-window">
+                <div class="status-header">
+                    <h3>📊 LIVE STATUS</h3>
+                    <div class="status-controls">
+                        <button id="clearLog" class="cyber-button small">CLEAR</button>
+                        <button id="exportLog" class="cyber-button small">EXPORT</button>
+                    </div>
+                </div>
+                <div class="status-content">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="status-stats">
+                        <div class="stat">
+                            <span class="stat-label">REQUESTS:</span>
+                            <span id="requestCount" class="stat-value">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">SUCCESS:</span>
+                            <span id="successCount" class="stat-value">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">FAILED:</span>
+                            <span id="failedCount" class="stat-value">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">VULNERABILITIES:</span>
+                            <span id="vulnCount" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="log-container">
+                        <div id="logOutput" class="log-output"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="panel">
+                <h2 class="panel-title">🎯 INJECTION RESULTS</h2>
+                <div class="results-tabs">
+                    <button class="result-tab-btn active" data-tab="vulnerabilities">VULNERABILITIES</button>
+                    <button class="result-tab-btn" data-tab="payloads">PAYLOADS</button>
+                    <button class="result-tab-btn" data-tab="data">EXTRACTED DATA</button>
+                    <button class="result-tab-btn" data-tab="recon">RECON DATA</button>
+                </div>
+                <div class="results-content">
+                    <div id="vulnerabilities" class="result-tab-content active">
+                        <div class="data-list" id="vulnList"></div>
+                    </div>
+                    <div id="payloads" class="result-tab-content">
+                        <div class="data-list" id="payloadList"></div>
+                    </div>
+                    <div id="data" class="result-tab-content">
+                        <div class="data-list" id="dataList"></div>
+                    </div>
+                    <div id="recon" class="result-tab-content">
+                        <div class="data-list" id="reconList"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="footer-text">CYBERPUNK SQL INJECTOR v2.0 - Advanced Database Penetration Tool</span>
+                <span class="footer-status">SYSTEM: OPERATIONAL | STATUS: READY</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

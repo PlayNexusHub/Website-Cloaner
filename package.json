@@ -1,0 +1,68 @@
+{
+  "name": "cyberpunk-site-cloner",
+  "version": "2.085.0",
+  "description": "A futuristic website cloning tool with cyberpunk UI and real-time progress tracking",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"No build process required - static files only\"",
+    "lint": "echo \"No linting configured\"",
+    "format": "echo \"No formatting configured\""
+  },
+  "keywords": [
+    "cyberpunk",
+    "website-cloner",
+    "html",
+    "css",
+    "javascript",
+    "blade-runner",
+    "futuristic",
+    "ui",
+    "neon",
+    "terminal",
+    "web-scraping",
+    "site-downloader"
+  ],
+  "author": "Cyberpunk Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cyberpunk-site-cloner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cyberpunk-site-cloner/issues"
+  },
+  "homepage": "https://github.com/yourusername/cyberpunk-site-cloner#readme",
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "jszip": "^3.10.1",
+    "file-saver": "^2.0.5",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "index.html",
+    "styles.css",
+    "script.js",
+    "demo.html",
+    "README.md"
+  ],
+  "contributors": [],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/yourusername"
+  }
+} 

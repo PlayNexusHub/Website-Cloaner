@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Site - Test the Cyberpunk Cloner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Demo Site</h1>
+        <p>Test the Cyberpunk Site Cloner with this beautiful demo page</p>
+    </div>
+    
+    <div class="content">
+        <h2>Welcome to the Future</h2>
+        <p>This is a demo page designed to showcase the capabilities of the Cyberpunk Site Cloner. It includes various elements that the cloner can extract:</p>
+        
+        <ul>
+            <li>HTML structure and content</li>
+            <li>CSS styling and animations</li>
+            <li>JavaScript functionality</li>
+            <li>Images and media content</li>
+            <li>Responsive design elements</li>
+        </ul>
+    </div>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Beautiful Design</h3>
+            <p>Modern gradient backgrounds and glassmorphism effects</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Works perfectly on all devices and screen sizes</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast & Light</h3>
+            <p>Optimized for speed and performance</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3>Easy to Clone</h3>
+            <p>Perfect for testing the cyberpunk cloner tool</p>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>Image Gallery</h2>
+        <p>This section contains images that the cloner can extract:</p>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=1" alt="Random Image 1">
+                <p>Beautiful Landscape</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=2" alt="Random Image 2">
+                <p>Urban Scene</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=3" alt="Random Image 3">
+                <p>Nature View</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=4" alt="Random Image 4">
+                <p>Abstract Art</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>Ready to Test?</h2>
+        <p>Use this page to test the Cyberpunk Site Cloner. Simply copy the URL of this page and paste it into the cloner to see it in action!</p>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="#" class="cta-button" onclick="showAlert()">Test JavaScript</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 Demo Site - Built for testing the Cyberpunk Site Cloner</p>
+        <p>This page contains various elements to test cloning capabilities</p>
+    </div>
+    
+    <script>
+        // Simple JavaScript functionality to test
+        function showAlert() {
+            alert('🎉 JavaScript is working! This proves the cloner can extract and preserve JavaScript functionality.');
+        }
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to feature cards
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255,255,255,0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(255,255,255,0.1)';
+                });
+            });
+            
+            // Add click effects to gallery items
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+            
+            console.log('Demo site loaded successfully! Ready for cloning.');
+        });
+    </script>
+</body>
+</html> 
